@@ -1,0 +1,21 @@
+.card__title {
+    margin: 0;
+    margin-left: 14px;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    grid-area: title;
+}
+
+@media screen and (max-width:768px) {
+    .card__title {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:320) {
+    .card__title {
+        font-size: 0.75rem;
+    }
+}

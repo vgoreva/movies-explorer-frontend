@@ -1,0 +1,29 @@
+.techs__item {
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #E8E8E8;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+@media screen and (max-width:833px) {
+    .techs__item {
+        width: 84px;
+        height: 57px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .techs__item {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,22 @@
+.about {
+    height: 608px;
+    display: grid;
+}
+
+@media screen and (max-width:768px) {
+    .about {
+        height: 585px;
+    }
+}
+
+@media screen and (max-width:445px) {
+    .about {
+        height: 750px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .about {
+        height: 641px;
+    }
+}

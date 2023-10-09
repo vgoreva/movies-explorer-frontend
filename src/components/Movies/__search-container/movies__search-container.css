@@ -1,0 +1,15 @@
+.movies__search-container {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 913px;
+    border-right: 1px solid #CBCBCB;
+}
+
+@media screen and (max-width:755px) {
+    .movies__search-container{
+        width: 100%;
+        border: none;
+    }
+}

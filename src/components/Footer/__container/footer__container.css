@@ -1,0 +1,21 @@
+.footer__container {
+    display: grid;
+    grid-template-areas:
+        "about about about about"
+        "year . . link";
+    grid-template-rows: 36px 16px;
+    gap: 20px;
+    height: 73px;
+}
+
+@media screen and (max-width:320px) {
+    .footer__container {
+        grid-template-areas:
+            "about"
+            "link"
+            "year";
+        grid-template-rows: 36px 42px 15px;
+        text-align: center;
+        gap: 30px;
+    }
+}

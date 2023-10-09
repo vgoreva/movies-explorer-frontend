@@ -1,0 +1,17 @@
+.profile__logout {
+    margin: 0;
+    margin-top: 16px;
+    padding: 0;
+    color: #FF4062;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:320px) {
+    .profile__logout {
+        font-size: 0.75rem;
+    }
+}

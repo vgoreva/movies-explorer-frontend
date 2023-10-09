@@ -1,0 +1,24 @@
+.profile__edit {
+    margin: 0;
+    margin-top: 220px;
+    padding: 0;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:768px) {
+    .profile__edit {
+        margin-top: 210px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .profile__edit {
+        font-size: 0.75rem;
+        margin-top: 379px;
+    }
+}

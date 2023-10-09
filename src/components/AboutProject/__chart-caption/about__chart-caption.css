@@ -1,0 +1,17 @@
+.about__chart-caption {
+    margin: 0;
+    margin-top: 14px;
+    padding: 0;
+    text-align: center;
+    color: #A0A0A0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+@media screen and (max-width:590px) {
+    .about__chart-caption {
+        font-size: 0.687rem;
+        line-height: 1.2;
+    }
+}

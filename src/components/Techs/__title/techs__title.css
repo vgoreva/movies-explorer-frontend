@@ -1,0 +1,15 @@
+.techs__title {
+    margin: 0;
+    padding: 0;
+    height: 49px;
+    font-size: 1.376rem;
+    font-weight: 400;
+    line-height: 1.2;
+    border-bottom: 1px solid #000;
+}
+
+@media screen and (max-width:320px) {
+    .techs__title {
+        font-size: 1.125rem;
+    }
+}

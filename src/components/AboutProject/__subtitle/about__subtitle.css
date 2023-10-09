@@ -1,0 +1,14 @@
+.about__subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:7400px) {
+    .about__subtitle {
+        font-size: 1.125rem;
+        line-height: 1.2;
+    }
+}

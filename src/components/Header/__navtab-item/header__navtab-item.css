@@ -1,0 +1,26 @@
+.header__navtab-item {
+    list-style-type: none;
+    align-self: center;
+}
+
+.header__navtab-item:nth-child(2) {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .header__navtab-item:nth-child(2) {
+        display: block;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header__navtab-item:last-child {
+        margin-top: 594px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .header__navtab-item:last-child {
+        margin-top: 420px;
+    }
+}

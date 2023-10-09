@@ -1,0 +1,16 @@
+.footer__links {
+    grid-area: link;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    justify-self: end;
+}
+
+@media screen and (max-width:320px) {
+    .footer__links {
+        margin: auto;
+        flex-direction: column;
+    }
+}

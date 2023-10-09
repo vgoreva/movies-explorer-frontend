@@ -1,0 +1,22 @@
+.techs__gallery {
+    margin: 100px auto;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .techs__gallery {
+        margin-top: 81px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .techs__gallery {
+        margin: 50px;
+    }
+}

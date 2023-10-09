@@ -1,0 +1,21 @@
+.movies__short-film {
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+    margin-right: 20px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.38;
+}
+
+@media screen and (max-width:768px) {
+    .movies__short-film {
+        margin-left: 42px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .movies__short-film {
+        margin-left: 48px;
+    }
+}

@@ -1,0 +1,10 @@
+.header__menu_active {
+    right: 0;
+    width: 68%;
+}
+
+@media screen and (max-width:320px) {
+    .header__menu_active {
+        width: 100%;
+    }
+}

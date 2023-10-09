@@ -1,0 +1,27 @@
+.about__chart {
+    grid-area: chart;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 36px 1fr;
+}
+
+@media screen and (max-width:740px) {
+    .about__chart {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:497px) {
+    .about__chart {
+        grid-template-columns: 80px 1fr;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .about__chart {
+        grid-template-columns: 100px 184px;
+    }
+}

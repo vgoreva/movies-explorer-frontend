@@ -1,0 +1,16 @@
+.footer__year {
+    grid-area: year;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:320px) {
+    .footer__year {
+        font-size: 0.75rem;
+        color: #A0A0A0;
+    }
+}

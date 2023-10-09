@@ -1,0 +1,32 @@
+.about__container {
+    margin: 110px 70px;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "section"
+        "chart";
+    grid-template-rows: 49px 90px 67px;
+    gap: 70px;
+}
+
+@media screen and (max-width:768px) {
+    .about__container {
+        margin: 90px 50px;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .about__container {
+        grid-template-rows: 50px 220px 65px;
+        gap: 56px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .about__container {
+        grid-template-rows: 50px 272px 65px;
+        gap: 56px;
+        margin: 70px 18px;
+    }
+}

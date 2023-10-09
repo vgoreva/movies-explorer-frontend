@@ -1,0 +1,13 @@
+.footer {
+    margin: 0;
+    padding: 79px 70px 20px;
+    height: 172px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:320px) {
+    .footer {
+        padding: 79px 10px 20px;
+        height: 253px;
+    }
+}

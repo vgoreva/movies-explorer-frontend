@@ -1,0 +1,13 @@
+.portfolio__icon {
+    margin: 0;
+    padding: 0;
+    width: 27px;
+    height: 27px;
+}
+
+@media screen and (max-width:320px) {
+    .portfolio__icon {
+        width: 14px;
+        height: 14px;
+    }
+}

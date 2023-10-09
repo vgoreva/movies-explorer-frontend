@@ -1,0 +1,21 @@
+.portfolio__line {
+    margin: 0;
+    margin-bottom: 20px;
+    height: 68px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.portfolio__line:nth-last-child(1) {
+    border: none;
+}
+
+@media screen and (max-width:320px) {
+    .portfolio__line {
+        height: 47px;
+    }
+}

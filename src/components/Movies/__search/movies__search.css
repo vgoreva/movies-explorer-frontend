@@ -1,0 +1,12 @@
+.movies__search {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 84.5%;
+}
+
+@media screen and (max-width:425px) {
+    .movies__search {
+        padding-left: 19px;
+    }
+}

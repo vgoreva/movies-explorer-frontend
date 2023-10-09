@@ -1,0 +1,17 @@
+.notfound {
+    margin: 246px auto;
+    padding: 0 auto;
+    width: fit-content;
+}
+
+@media screen and (max-width:768px) {
+    .notfound {
+        margin-top: 408px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .notfound {
+        margin-top: 329px;
+    }
+}

@@ -1,0 +1,16 @@
+.notfound__button {
+    margin: 184px auto 0;
+    padding: 0;
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:320px) {
+    .notfound__button {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,14 @@
+.card__mark-icon {
+    margin: 0;
+    padding: 0;
+    width: 21px;
+    height: 21px;
+    border: unset;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-image: url(../../../images/mark.svg);
+    background-repeat: no-repeat;
+}

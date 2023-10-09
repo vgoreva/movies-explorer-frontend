@@ -1,0 +1,14 @@
+.portfolio__name {
+    margin: 0;
+    padding: 0;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.785;
+}
+
+@media screen and (max-width:320px) {
+    .portfolio__name {
+        font-size: 1.125rem;
+        line-height: 1.5;
+    }
+}

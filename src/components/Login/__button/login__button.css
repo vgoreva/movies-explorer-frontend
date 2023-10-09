@@ -1,0 +1,11 @@
+.login__button {
+    margin: 0;
+    margin-top: 70px;
+    height: 45px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+}

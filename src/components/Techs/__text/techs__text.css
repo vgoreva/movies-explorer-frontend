@@ -1,0 +1,23 @@
+.techs__text {
+    margin: 0 auto;
+    margin-top: 26px;
+    padding: 0;
+    display: block;
+    max-width: 460px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+@media screen and (max-width:768px) {
+    .techs__text {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width:748px) {
+    .techs__text {
+        font-size: 0.687rem;
+    }
+}

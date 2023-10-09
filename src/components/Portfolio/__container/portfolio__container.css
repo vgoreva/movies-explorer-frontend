@@ -1,0 +1,12 @@
+.portfolio__container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:320px) {
+    .portfolio__container {
+        margin-top: 40px;
+    }
+}

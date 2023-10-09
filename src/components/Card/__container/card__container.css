@@ -1,0 +1,20 @@
+.card__container {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        "image image"
+        "title duration";
+    row-gap: 14px;
+}
+
+@media screen and (max-width:768px) {
+    .card__container {
+        row-gap: 25px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .card__container {
+        row-gap: 16px;
+    }
+}

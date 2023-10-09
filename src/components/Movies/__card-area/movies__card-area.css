@@ -1,0 +1,31 @@
+.movies__card-area {
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 60px;
+    column-gap: 30px;
+}
+
+@media screen and (max-width:1000px) {
+    .movies__card-area {
+        row-gap: 47px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .movies__card-area {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:625px) {
+    .movies__card-area {
+        grid-template-columns: 100%;
+        justify-items: center;
+        margin-top: 50px;
+        row-gap: 36px;
+    }
+}

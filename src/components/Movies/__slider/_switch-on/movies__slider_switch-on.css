@@ -1,0 +1,8 @@
+.movies__slider_switch-on {
+    background-color: #EBEBEB;
+}
+
+.movies__slider_switch-on::after {
+    background-color: #F5F5F5;
+    left: 2px;
+}
