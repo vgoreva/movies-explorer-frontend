@@ -1,10 +1,10 @@
 .movies {
-    margin: 70px 70px 89px;
+    margin: 70px 70px 81px;
 }
 
 @media screen and (max-width:768px) {
     .movies {
-    margin: 80px 30px 109px;
+    margin: 74px 30px 109px;
     } 
 }
 

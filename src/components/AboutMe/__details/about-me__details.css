@@ -9,6 +9,7 @@
 
 @media screen and (max-width:768px) {
     .about-me__details {
+        margin-top: 15px;
         font-size: 0.75rem;
         line-height: 1.5;
     }

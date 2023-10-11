@@ -8,3 +8,10 @@
     font-weight: 400;
     line-height: normal;
 }
+
+@media screen and (max-width:320px) {
+    .login__note {
+        margin-top: 13px;
+        font-size: 0.75rem;
+    }
+}

@@ -8,9 +8,10 @@
     grid-template-rows: 36px 1fr;
 }
 
-@media screen and (max-width:740px) {
+@media screen and (max-width:768px) {
     .about__chart {
-        margin-top: 0;
+        grid-template-columns: 140px 1fr;
+        margin-top: 23px;
     }
 }
 
@@ -22,6 +23,7 @@
 
 @media screen and (max-width:320px) {
     .about__chart {
+        margin: 0;
         grid-template-columns: 100px 184px;
     }
 }

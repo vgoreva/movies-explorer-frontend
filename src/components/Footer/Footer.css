@@ -5,9 +5,15 @@
     box-sizing: border-box;
 }
 
+@media screen and (max-width:768px) {
+    .footer {
+        padding: 48px 30px 20px;
+    }
+}
+
 @media screen and (max-width:320px) {
     .footer {
-        padding: 79px 10px 20px;
+        padding: 50px 10px 20px;
         height: 253px;
     }
 }

@@ -1,19 +1,17 @@
 .portfolio {
-    margin: 0;
-    padding: 100px 50px;
-    height: 480px;
+    padding: 0;
+    margin: 100px 70px 90px;
     box-sizing: border-box;
 }
 
 @media screen and (max-width:768px) {
     .portfolio {
-        padding: 90px 50px;
+        margin: 90px 50px 85px;
     }
 }
 
 @media screen and (max-width:320px) {
     .portfolio {
-        padding: 70px 14px;
-        height: 364px;
+        margin: 68px 14px;
     }
 }

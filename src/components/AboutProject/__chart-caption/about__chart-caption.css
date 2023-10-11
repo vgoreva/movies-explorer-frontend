@@ -6,12 +6,18 @@
     color: #A0A0A0;
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 @media screen and (max-width:590px) {
     .about__chart-caption {
         font-size: 0.687rem;
         line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about__chart-caption {
+        margin-top: 9px;
     }
 }

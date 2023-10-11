@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 
 function Profile() {
     return (
-        <section className="profile">
-            <h1 className="profile__greeting">Привет, Виталий!</h1>
+        <main className="main">
+            <section className="profile">
+                <h1 className="profile__greeting">Привет, Виталий!</h1>
                 <table className="profile__table">
                     <tr className="profile__line">
                         <td className="profile__cell-name">Имя</td>
@@ -15,8 +16,9 @@ function Profile() {
                     </tr>
                 </table>
                 <Link to={"#"} className="profile__edit">Редактировать</Link>
-                <Link to={"/signin"} className="profile__logout">Выйти из аккаунта</Link>
-        </section>
+                <Link to={"/"} className="profile__logout">Выйти из аккаунта</Link>
+            </section>
+        </main>
     )
 }
 

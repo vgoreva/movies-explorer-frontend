@@ -12,13 +12,13 @@
 
 @media screen and (max-width:768px) {
     .about-me__link {
-        margin-top: 67px;
+        margin-top: 107px;
     }
 }
 
 
 @media screen and (max-width:320px) {
     .about-me__link {
-        margin-top: 40px;
+        margin-top: 60px;
     }
 }

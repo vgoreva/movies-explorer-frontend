@@ -19,7 +19,7 @@ function Login({ onLogin }) {
             type: "email",
             name: "email",
             id: "email",
-            placeholder: "Email",
+            placeholder: "E-mail",
             required: true,
             value: email || " ",
             onChange: evt => {

@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom"
-
-
 function NavTab() {
     return (
         <section className="navtab">
-            <div className="navtab__container">
-                <Link to={"#"} className="navtab__link">О проекте</Link>
-                <Link to={"#"} className="navtab__link">Технологии</Link>
-                <Link to={"#"} className="navtab__link">Студент</Link>
-            </div>
+            <nav className="navtab__list">
+                <ul className="navtab__container">
+                <li className="navtab__string"> <a href={"#about"} className="navtab__link">О проекте</a></li>
+                <li className="navtab__string"> <a href={"#techs"} className="navtab__link">Технологии</a></li>
+                <li className="navtab__string"> <a href={"#student"} className="navtab__link">Студент</a></li>
+                </ul>
+            </nav>
         </section>
     )
 }

@@ -4,3 +4,9 @@
     max-height: 232px;
     list-style-type: none;
 }
+
+@media screen and (max-width:768px) {
+    .card {
+        max-width: 339px;
+    }
+}

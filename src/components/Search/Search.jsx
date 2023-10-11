@@ -17,7 +17,7 @@ function Search() {
                         src={search}
                         alt="Искать" />
                     <input className="movies__search" type="search" placeholder="Фильм" />
-                    <button className="movies__button">Найти</button>
+                    <button className="movies__button" type="button">Найти</button>
                 </div>
                 <div className="movies__switch-container">
                     <label className="movies__switch">

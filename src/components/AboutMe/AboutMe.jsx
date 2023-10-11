@@ -3,11 +3,11 @@ import photo from "../../images/photo.jpg"
 
 function AboutMe() {
     return (
-        <section className="about-me">
+        <section className="about-me" id="student">
             <h2 className="about-me__title">Студент</h2>
             <div className="about-me__container">
                 <div className="about-me__card">
-                    <p className="about-me__name">Горева Влада</p>
+                    <h3 className="about-me__name">Горева Влада</h3>
                     <p className="about-me__details">Студентка Практикума, 29 лет</p>
                     <p className="about-me__description">Я из города Мегион. В 18 лет переехала в Санкт-Петербург учиться в СПБГУ.
                         У меня есть муж и кот. Я люблю готовить, а ещё увлекаюсь плаванием. Недавно начала кодить.

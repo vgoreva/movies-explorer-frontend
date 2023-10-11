@@ -12,6 +12,7 @@ function Movies() {
     }, [])
 
     return (
+        <main className="main">
         <section className="movies">
             <div className="movies__search-area">
                 <Search />
@@ -25,8 +26,9 @@ function Movies() {
                     )
                 })}
             </ul>
-            <button className="movies__button">Ещё</button>
+            <button className="movies__more-button" type="button">Ещё</button>
         </section>
+        </main>
     )
 }
 

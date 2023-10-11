@@ -20,6 +20,7 @@
 
 @media screen and (max-width:320px) {
     .header__navtab {
+        margin-top: 145px;
         gap: 24px;
     }
 }

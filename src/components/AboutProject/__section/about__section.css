@@ -4,6 +4,13 @@
     grid-area: section;
     display: flex;
     flex-direction: row;
+    gap: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .about__section {
+        gap:35px;
+    }
 }
 
 @media screen and (max-width:740px) {

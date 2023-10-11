@@ -11,8 +11,8 @@ function Main() {
         <main className="main">
             <Promo />
             <NavTab />
-            <AboutProject />
-            <Techs />
+            <AboutProject/>
+            <Techs/>
             <AboutMe />
             <Portfolio />
         </main>

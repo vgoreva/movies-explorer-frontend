@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../images/logo.svg';
 
 function AuthPage({ name, title, children, titleButton, onSubmit }) {
+
+    const navigate = useNavigate()
+
     return (
+        <main className="main">
         <section className="login">
             <img
                 className="login__logo"
                 src={logo}
                 alt="Логотип"
+                onClick={() => navigate('/')}
             />
-            <h2 className="login__title">{title}</h2>
+            <h1 className="login__title">{title}</h1>
             <form className="login__form"
                 name={`login_type_${name}`}
                 noValidate=""
@@ -22,6 +27,7 @@ function AuthPage({ name, title, children, titleButton, onSubmit }) {
                     : <span className="login__note">Еще не зарегистрированы? <Link to={"/signup"} className="login__link"> Регистрация </Link> </span>}
             </form>
         </section>
+        </main>
     )
 }
 

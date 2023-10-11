@@ -12,7 +12,7 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className="app__content">
         <Routes>
           <Route path='/' element={
@@ -34,11 +34,8 @@ function App() {
 
           <Route path='/profile' element={
             <div>
-              <Header
-              name = 'profile' />
-              <Profile
-                // userName={userName}
-                />
+              <Header />
+              <Profile/>
             </div>
           } />
 

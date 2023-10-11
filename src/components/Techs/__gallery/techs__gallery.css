@@ -10,13 +10,14 @@
 
 @media screen and (max-width:768px) {
     .techs__gallery {
-        margin-top: 81px;
+        margin-top: 85px;
         flex-wrap: wrap;
     }
 }
 
 @media screen and (max-width:320px) {
     .techs__gallery {
+        justify-content: start;
         margin: 50px;
     }
 }

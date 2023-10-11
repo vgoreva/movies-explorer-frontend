@@ -16,6 +16,8 @@
 
 @media screen and (max-width:320px) {
     .movies__short-film {
-        margin-left: 48px;
+        margin-left: 0;
+        font-size: 0.6875rem;
+        line-height: 1.63;
     }
 }

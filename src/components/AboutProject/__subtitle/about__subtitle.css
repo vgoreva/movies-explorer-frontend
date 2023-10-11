@@ -4,9 +4,10 @@
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
+    letter-spacing: -0.8px;
 }
 
-@media screen and (max-width:7400px) {
+@media screen and (max-width:748px) {
     .about__subtitle {
         font-size: 1.125rem;
         line-height: 1.2;

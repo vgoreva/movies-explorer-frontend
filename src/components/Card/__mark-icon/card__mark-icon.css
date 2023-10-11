@@ -12,3 +12,10 @@
     background-image: url(../../../images/mark.svg);
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width:320px) {
+    .card__mark-icon {
+        top: 10px;
+        right: 10px;
+    }
+}
