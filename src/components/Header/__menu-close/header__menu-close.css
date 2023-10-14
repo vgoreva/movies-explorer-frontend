@@ -1,0 +1,14 @@
+.header__menu-close {
+    display: none;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
+
+@media screen and (max-width:320px) {
+    .header__menu-close {
+        margin-bottom: 74px
+    }
+}

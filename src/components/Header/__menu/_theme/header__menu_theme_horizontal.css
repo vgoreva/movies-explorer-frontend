@@ -1,0 +1,9 @@
+.header__menu_theme_horizontal {
+    width: 100%;
+    height: fit-content;
+    position: unset;
+    background-color: transparent;
+    transition: none;
+    display: flex;
+    justify-content: end;
+}

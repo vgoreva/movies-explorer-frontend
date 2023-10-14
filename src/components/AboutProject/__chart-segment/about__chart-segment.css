@@ -1,0 +1,19 @@
+.about__chart-segment {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: #F2F2F2;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+@media screen and (max-width:590px) {
+    .about__chart-segment {
+        font-size: 0.687rem;
+    }
+}

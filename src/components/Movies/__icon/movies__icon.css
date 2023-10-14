@@ -1,0 +1,15 @@
+.movies__icon {
+    margin: 0;
+    margin-left: 18px;
+    margin-right: 10px;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    align-self: center;
+}
+
+@media screen and (max-width:425px) {
+    .movies__icon {
+        display: none;
+    }
+}

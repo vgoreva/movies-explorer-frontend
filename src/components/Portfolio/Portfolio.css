@@ -1,0 +1,17 @@
+.portfolio {
+    padding: 0;
+    margin: 100px 70px 90px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:768px) {
+    .portfolio {
+        margin: 90px 50px 85px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .portfolio {
+        margin: 68px 14px;
+    }
+}

@@ -1,0 +1,19 @@
+.header__menu-icon {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .header__menu-icon {
+        display: block;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        margin-top: -1px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .header__menu-icon {
+        width: 36px;
+    }
+}

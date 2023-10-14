@@ -1,0 +1,20 @@
+.about__section {
+    margin: 0;
+    padding: 0;
+    grid-area: section;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .about__section {
+        gap:35px;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .about__section {
+        flex-direction: column;
+    }
+}

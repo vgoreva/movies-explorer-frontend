@@ -1,0 +1,26 @@
+.promo {
+    margin: 0;
+    padding: 0;
+    height: 525px;
+    background-color: #F3C1F8;
+    background-image: url(../../images/promo.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 39%;
+    background-size: 320px;
+    display: grid;
+}
+
+@media screen and (max-width:768px) {
+    .promo {
+        height: 785px;
+        background-position: 50% 48%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .promo {
+        height: 570px;
+        background-size: 248px;
+        background-position: 50% 44%;
+    }
+}

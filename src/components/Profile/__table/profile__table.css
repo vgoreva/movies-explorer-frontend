@@ -1,0 +1,10 @@
+.profile__table {
+        margin: 0 auto;
+        width: 410px;
+}
+
+@media screen and (max-width:420px) {
+        .profile__table {
+                width: 260px;
+        }
+}
