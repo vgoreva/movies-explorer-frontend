@@ -1,23 +1,26 @@
 import { useState } from 'react';
 import AuthPage from '../AuthPage/AuthPage';
 
-function Register ({onRegister}) {
+function Register ({onRegister, isSend, isError, setIsError}) {
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
+
     const [password, setPassword] = useState("");
     const [nameFormError, setNameFormError] = useState(" ");
+
     const [emailFormError, setEmailFormError] = useState(" ");
     const [passwordFormError, setPasswordFormError] = useState(" ");
 
     const inputs =
         [{
-            type: "userName",
-            name: "userName",
-            id: "userName",
+            type: "text",
+            name: "username",
+            id: "username",
             placeholder: "Имя",
             required: true,
             value: userName  || "",
-            onChange: evt => {
+            onChange: (evt) => {
+                setIsError(false)
                 setUserName(evt.target.value);
                 setNameFormError(evt.target.validationMessage || " ")
             },
@@ -31,7 +34,8 @@ function Register ({onRegister}) {
             placeholder: "E-mail",
             required: true,
             value: email || "",
-            onChange: evt => {
+            onChange: (evt) => {
+                setIsError(false)
                 setEmail(evt.target.value);
                 setEmailFormError(evt.target.validationMessage || " ")
             },
@@ -45,7 +49,8 @@ function Register ({onRegister}) {
             placeholder: "Пароль",
             required: true,
             value: password || "",
-            onChange: evt => {
+            onChange: (evt) => {
+                setIsError(false)
                 setPassword(evt.target.value);
                 setPasswordFormError(evt.target.validationMessage || " ")
             },
@@ -58,7 +63,7 @@ function Register ({onRegister}) {
         e.preventDefault();
 
         onRegister ({
-            setUserName: setUserName,
+            username: userName,
             email: email,
             password: password})
     }
@@ -67,8 +72,11 @@ function Register ({onRegister}) {
         < AuthPage
             name="register"
             title="Добро пожаловать!"
-            titleButton="Зарегистрироваться"
+            buttonTitle="Зарегистрироваться"
             onSubmit={handleRegister}
+            isSend={isSend}
+            setIsError={setIsError}
+            isError={isError}
         >
             {inputs.map(({ type, name, id, placeholder, required, value, onChange, errorMesage, key }) => {
                 return <div key={key}>

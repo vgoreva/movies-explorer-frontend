@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import AuthPage from '../AuthPage/AuthPage';
 
-function Login({ onLogin }) {
+function Login({ onLogin, isSend, isError, setIsError}) {
     const [email, setEmail] = useState(" ");
     const [password, setPassword] = useState(" ");
     const [emailFormError, setEmailFormError] = useState(" ");
@@ -22,7 +22,8 @@ function Login({ onLogin }) {
             placeholder: "E-mail",
             required: true,
             value: email || " ",
-            onChange: evt => {
+            onChange: (evt) => {
+                setIsError(false)
                 setEmail(evt.target.value);
                 setEmailFormError(evt.target.validationMessage || " ")
             },
@@ -36,7 +37,8 @@ function Login({ onLogin }) {
             placeholder: "Пароль",
             required: true,
             value: password || "",
-            onChange: evt => {
+            onChange: (evt) => {
+                setIsError(false)
                 setPassword(evt.target.value);
                 setPasswordFormError(evt.target.validationMessage || " ")
             },
@@ -56,8 +58,11 @@ function Login({ onLogin }) {
     return (< AuthPage
         name="login"
         title="Рады видеть!"
-        titleButton="Войти"
+        buttonTitle="Войти"
         onSubmit={handleLogin}
+        isSend={isSend}
+        setIsError={setIsError}
+        isError={isError}
     >
         {inputs.map(({ type, name, id, placeholder, required, value, onChange, errorMesage, key }) => {
             return <div key={key}>

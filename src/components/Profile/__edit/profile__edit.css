@@ -1,8 +1,12 @@
 .profile__edit {
-    margin: 0;
+    margin: 0 auto;
     margin-top: 220px;
     padding: 0;
+    display: block;
+    width: fit-content;
     color: #000;
+    background-color: transparent;
+    border: none;
     text-decoration: none;
     text-align: center;
     font-size: 0.8125rem;

@@ -1,6 +1,6 @@
-.profile__logout {
+.profile__message {
     margin: 0 auto;
-    margin-top: 16px;
+    margin-top: 100px;
     padding: 0;
     display: block;
     width: fit-content;
@@ -12,10 +12,4 @@
     font-size: 0.8125rem;
     font-weight: 400;
     line-height: 1.2;
-}
-
-@media screen and (max-width:320px) {
-    .profile__logout {
-        font-size: 0.75rem;
-    }
 }

@@ -1,24 +1,86 @@
-import { Link } from "react-router-dom"
+import { useContext, useEffect, useState } from "react";
+import ProfileForm from "../ProfileForm/ProfileForm";
+import CurrentUserContext from '../../contexts/CurrentUserContext';
 
-function Profile() {
+function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIsSuccess }) {
+    const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("");
+
+    const currentUser = useContext(CurrentUserContext);
+
+    const inputs =
+        [{
+            type: "text",
+            name: "username",
+            id: "username",
+            placeholder: "Имя",
+            required: true,
+            value: userName || "",
+            onChange: (evt) => {
+                setIsError(false)
+                setIsSuccess(false)
+                setUserName(evt.target.value);
+            },
+            key: 1
+        },
+        {
+            type: "email",
+            name: "email",
+            id: "email",
+            placeholder: "E-mail",
+            required: true,
+            value: email || "",
+            onChange: (evt) => {
+                setIsError(false)
+                setIsSuccess(false)
+                setEmail(evt.target.value);
+            },
+
+            key: 2
+        }]
+
+    useEffect(() => {
+        setUserName(currentUser.name);
+        setEmail(currentUser.email);
+    }, []);
+
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        onUpdateUser({
+            username: userName,
+            email: email,
+        });
+    }
+
     return (
-        <main className="main">
-            <section className="profile">
-                <h1 className="profile__greeting">Привет, Виталий!</h1>
-                <table className="profile__table">
-                    <tr className="profile__line">
-                        <td className="profile__cell-name">Имя</td>
-                        <td className="profile__cell-content">Виталий</td>
-                    </tr>
-                    <tr className="profile__line">
-                        <td className="profile__cell-name">E-mail</td>
-                        <td className="profile__cell-content">pochta@yandex.ru</td>
-                    </tr>
-                </table>
-                <Link to={"#"} className="profile__edit">Редактировать</Link>
-                <Link to={"/"} className="profile__logout">Выйти из аккаунта</Link>
-            </section>
-        </main>
+        <ProfileForm
+            onLogout={onLogout}
+            onSubmit={handleSubmit}
+            setIsError={setIsError}
+            isError={isError}
+            setIsSucces={setIsSuccess}
+            isSuccess={isSuccess}
+        >
+            {inputs.map(({ type, name, id, placeholder, required, value, onChange, errorMesage, key }) => {
+                return <div className="profile__line" key={key}>
+                    <div className="profile__cell-name">{placeholder}</div>
+                    <input
+                        className="profile__cell-content"
+                        type={type}
+                        id={id}
+                        name={name}
+                        placeholder={placeholder}
+                        required={required}
+                        value={value}
+                        onChange={onChange}
+                        key={key + 1}
+                    />
+                </div>
+            })
+            }
+        </ProfileForm>
     )
 }
 
