@@ -123,7 +123,6 @@ function App() {
         .then(([userData, cardData]) => {
           setSavedMovies(cardData)
           setCurrentUser(userData)
-          setLoggedIn(true)
           setIsReady(false)
         })
         .catch((error) => {
