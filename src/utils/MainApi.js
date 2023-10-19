@@ -1,4 +1,4 @@
-class MainApi {
+ class MainApi {
     constructor(options) {
         this._url = options.baseUrl;
     }
@@ -22,8 +22,8 @@ class MainApi {
                 password: data.password,
             })
         })
-            .then(res => this._getResponseData(res));
-    }
+        .then(this._getResponseData)
+    } 
 
     authorization(data) {
         return fetch(`${this._url}/signin`, {
@@ -36,7 +36,8 @@ class MainApi {
                 password: data.password,
             })
         })
-            .then(res => this._getResponseData(res));
+        .then(this._getResponseData)
+
     }
 
     getUserData(token) {
