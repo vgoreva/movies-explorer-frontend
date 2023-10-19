@@ -36,6 +36,24 @@ function App() {
   //Хук навигации
   const navigate = useNavigate()
 
+  useEffect(() => {
+    if (localStorage.jwt) {
+      Promise.all([mainApi.getUser(localStorage.jwt), mainApi.getCards(localStorage.jwt)])
+        .then(([userData, cardData]) => {
+          setSavedMovies(cardData)
+          setCurrentUser(userData)
+          setLoggedIn(true)
+          setIsReady(false)
+        })
+        .catch((error) => {
+          console.log(`Ошибка: ${error}`)
+          setIsReady(false)
+          localStorage.clear()
+          setLoggedIn(false)
+        })
+    }
+  }, [loggedIn])
+
   // Обработчик входа в аккаунт
   function handleLogin(data) {
     setIsSend(true);
@@ -132,24 +150,6 @@ function App() {
                 console.log(`Ошибка при добавлении в избранное: ${error}`));
           }
         }
-
-  useEffect(() => {
-          if (localStorage.jwt) {
-            Promise.all([mainApi.getUser(localStorage.jwt), mainApi.getCards(localStorage.jwt)])
-              .then(([userData, cardData]) => {
-                setSavedMovies(cardData)
-                setCurrentUser(userData)
-                setLoggedIn(true)
-                setIsReady(false)
-              })
-              .catch((error) => {
-                console.log(`Ошибка: ${error}`)
-                setIsReady(false)
-                localStorage.clear()
-                setLoggedIn(false)
-              })
-          }
-        }, [loggedIn])
 
   return (
 
