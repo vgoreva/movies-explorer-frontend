@@ -91,13 +91,13 @@ function App() {
       });
   }
 
-  function handleDeleteCard (cardId) {
+  function handleDeleteCard(cardId) {
     mainApi.deleteCard(cardId, localStorage.jwt)
       .then(() => {
-        setSavedMovies(savedMovies.filter(movie => {return movie._id !== cardId}))
+        setSavedMovies(savedMovies.filter(movie => { return movie._id !== cardId }))
       })
-      .catch((error) => 
-      console.log(`Ошибка при удалении карточки: ${error}`));
+      .catch((error) =>
+        console.log(`Ошибка при удалении карточки: ${error}`));
   }
 
   function handleToggleCard(cardId) {
@@ -105,22 +105,22 @@ function App() {
     const searchAddedCard = savedMovies.filter((movie) => {
       return movie.movieId === cardId.id
     })
-     if (isAdd) {
+    if (isAdd) {
       handleDeleteCard(searchAddedCard[0]._id)
-     } else {
-      mainApi.createCard (cardId, localStorage.jwt)
-        .then (res => {
+    } else {
+      mainApi.createCard(cardId, localStorage.jwt)
+        .then(res => {
           setSavedMovies([res, ...savedMovies])
         })
-        .catch((error) => 
+        .catch((error) =>
           console.log(`Ошибка при добавлении в избранное: ${error}`));
-     }
+    }
   }
 
   useEffect(() => {
     if (localStorage.jwt) {
       Promise.all([mainApi.getUser(localStorage.jwt), mainApi.getCards(localStorage.jwt)])
-        .then(([userData, cardData]) => { 
+        .then(([userData, cardData]) => {
           setSavedMovies(cardData)
           setCurrentUser(userData)
           setLoggedIn(true)
@@ -129,13 +129,11 @@ function App() {
         .catch((error) => {
           console.log(`Ошибка: ${error}`)
           setIsReady(false)
+          localStorage.clear()
+          setLoggedIn(false)
         })
-    } else {
-      setLoggedIn(false)
-      setIsReady(false)
-      localStorage.clear()
     }
-  }, [loggedIn, savedMovies])
+  }, [loggedIn])
 
   return (
 
@@ -200,7 +198,7 @@ function App() {
                         isError={isError}
                         savedMovies={savedMovies}
                         addMovie={handleToggleCard}
-                        />
+                      />
                       <Footer />
                     </div>
                   </ProtectedRoute>
