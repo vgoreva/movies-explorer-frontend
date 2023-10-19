@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 30px;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .profile__line:first-child {

@@ -42,7 +42,7 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
     useEffect(() => {
         setUserName(currentUser.name);
         setEmail(currentUser.email);
-    }, []);
+    }, [currentUser]);
 
 
     function handleSubmit(e) {
