@@ -43,13 +43,16 @@ function App() {
           setSavedMovies(cardData)
           setCurrentUser(userData)
           setLoggedIn(true)
-          setIsReady(false)
+          setIsReady(true)
         })
         .catch((error) => {
           console.log(`Ошибка: ${error}`)
           setIsReady(false)
           localStorage.clear()
-          setLoggedIn(false)
+          setLoggedIn(true)
+        })
+        .finally(() => {
+          setIsReady(false)
         })
     }
   }, [loggedIn])
