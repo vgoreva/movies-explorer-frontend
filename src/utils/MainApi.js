@@ -40,7 +40,7 @@
 
     }
 
-    getUserData(token) {
+    getUserInfo(token) {
         return fetch(`${this._url}/users/me`, {
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -68,7 +68,7 @@
                 "Authorization": `Bearer ${token}`
             },
         })
-            .then(res => this._getResponseData(res));
+        .then(this._getResponseData)
     };
 
 
@@ -124,7 +124,8 @@
 }
 
 const mainApi = new MainApi({
-    baseUrl: 'https://api.goreva.diploma.nomoredomainsrocks.ru',
+    // baseUrl: 'https://api.goreva.diploma.nomoredomainsrocks.ru',
+    baseUrl: 'http://localhost:3000',
 })
 
 export default mainApi
