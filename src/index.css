@@ -29,6 +29,7 @@
 @import url(components/Card/Card.css);
 @import url(components/Card/__container/card__container.css);
 @import url(components/Card/__image/card__image.css);
+@import url(components/Card/__link/card__link.css);
 @import url(components/Card/__title/card__title.css);
 @import url(components/Card/__duration/card__duration.css);
 @import url(components/Card/__save-button/card__save-button.css);
@@ -133,8 +134,6 @@
 
 @import url(components/Search/__error/search__error.css);
 @import url(components/Search/__error/_active/search__error_active.css);
-
-
 
 @import url(components/Techs/Techs.css);
 @import url(components/Techs/__title/techs__title.css);

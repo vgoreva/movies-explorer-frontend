@@ -28,11 +28,13 @@ function Card({ name, card, savedMovies, onDelete, addMovie }) {
    }
     return (
         <div className="card__container">
+            <Link to={card.trailerLink}  className="card__link">
             <img
                 className="card__image"
                 src={pathname === '/movies' ? `https://api.nomoreparties.co/${card.image.url}` : card.image}
                 alt={card.nameRU}
             />
+            </Link>
             {pathname === '/saved-movies' ? 
                 <button 
                     className="card__delete"
@@ -43,7 +45,7 @@ function Card({ name, card, savedMovies, onDelete, addMovie }) {
                     type="button"
                     onClick={OnClick}
                 >{!click ? "Сохранить" : ""}</button>}
-            <Link to={card.trailerLink} className="card__title">{card.nameRU}</Link>
+            <h2  className="card__title">{card.nameRU}</h2>
             <span className="card__duration">{convertTime(card.duration)}</span>
         </div>
     )
