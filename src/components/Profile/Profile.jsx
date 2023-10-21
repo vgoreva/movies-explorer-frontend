@@ -7,6 +7,22 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
     const [email, setEmail] = useState("");
     const [isEdit, setIsEdit] = useState(false)
 
+    function validateEmail(email) {
+        if (currentUser.email === email || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+            setIsEdit(false)
+        } else {
+            setIsEdit(true)
+        }
+    }
+
+    function validateUserName(userName) {
+        if (currentUser.name === userName) {
+            setIsEdit(false)
+        } else {
+            setIsEdit(true)
+        }
+    }
+
     const currentUser = useContext(CurrentUserContext);
 
     const inputs =
@@ -18,9 +34,10 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
             required: true,
             value: userName || "",
             onChange: (evt) => {
-                setIsError(false)
-                setIsSuccess(false)
+                setIsError(false);
+                setIsSuccess(false);
                 setUserName(evt.target.value);
+                validateUserName(evt.target.value);
             },
             key: 1
         },
@@ -32,11 +49,11 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
             required: true,
             value: email || "",
             onChange: (evt) => {
-                setIsError(false)
-                setIsSuccess(false)
+                setIsError(false);
+                setIsSuccess(false);
                 setEmail(evt.target.value);
+                validateEmail(evt.target.value);
             },
-
             key: 2
         }]
 
@@ -44,14 +61,6 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
         setUserName(currentUser.name);
         setEmail(currentUser.email);
     }, []);
-
-    useEffect(() => {
-        if (currentUser.name === userName && currentUser.email === email) {
-            setIsEdit(false)
-        } else {
-            setIsEdit(true)
-        }
-    });
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -72,7 +81,7 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
             isSuccess={isSuccess}
             isEdit={isEdit}
         >
-            {inputs.map(({ type, name, id, placeholder, required, value, onChange, errorMesage, key }) => {
+            {inputs.map(({ type, name, id, placeholder, required, value, onChange, key }) => {
                 return <div className="profile__line" key={key}>
                     <div className="profile__cell-name">{placeholder}</div>
                     <input
