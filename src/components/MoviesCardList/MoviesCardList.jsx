@@ -6,6 +6,7 @@ import { useLocation } from "react-router";
 function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete, addMovie, entrance }) {
 
     const { pathname } = useLocation()
+    
     const [count, setCount] = useState('')
     const searchedMoviesOrder = movies.slice(0, count)
 
@@ -39,7 +40,7 @@ function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete,
             window.addEventListener('resize', resize)
             return () => window.removeEventListener('resize', resize)
         }
-    }, [pathname, movies])
+    }, [pathname, searchedMoviesOrder])
 
     function onMore() {
         setCount(count + arrangeCards().step)

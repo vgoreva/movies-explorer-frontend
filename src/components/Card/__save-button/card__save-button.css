@@ -9,6 +9,7 @@
     border: unset;
     cursor: pointer;
     position: absolute;
+    z-index: 600;
     top: 14px;
     right: 14px;
     font-size: 0.625rem;

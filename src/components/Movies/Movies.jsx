@@ -3,8 +3,11 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { useCallback, useEffect, useState } from "react";
 
 import moviesApi from "../../utils/MoviesApi"
+import { useNavigate } from "react-router";
 
 function Movies({ setIsError, savedMovies, addMovie, isError }) {
+
+    const navigate = useNavigate();
 
     const [allMovies, setAllMovies] = useState([]);
     const [searchedMovies, setSearchedMovies] = useState([]);
@@ -58,7 +61,7 @@ function Movies({ setIsError, savedMovies, addMovie, isError }) {
             setAllMovies(allMovies)
             filter(search, shorts, allMovies)
         }
-    }, [filter])
+    }, [filter, navigate])
 
     function chooseShorts() {
         if (isMark) {
