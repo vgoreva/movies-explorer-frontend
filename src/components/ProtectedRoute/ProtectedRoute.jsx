@@ -5,7 +5,7 @@ function ProtectedRoute ({ children, loggedIn}) {
 return (
     loggedIn ? 
     children
-    : <Navigate to={'/signin'} replace/>
+    : <Navigate to={'/'} replace/>
 )
 }
 
