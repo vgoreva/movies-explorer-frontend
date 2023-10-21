@@ -81,7 +81,7 @@ function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete,
                             <span className="movies__notation">Ничего не найдено</span> :
                                     ""
                 }
-                {count > movies.length || pathname === '/saved-movies'?
+                {count >= movies.length || pathname !== '/movies'?
                     "" :
                     <button className="movies__more-button" type="button" onClick={onMore}>Ещё</button> }
             </ul>

@@ -124,7 +124,8 @@
 }
 
 const mainApi = new MainApi({
-    baseUrl: 'https://api.goreva.diploma.nomoredomainsrocks.ru',
+    // baseUrl: 'https://api.goreva.diploma.nomoredomainsrocks.ru',
+    baseUrl: 'http://localhost:3000',
 })
 
 export default mainApi

@@ -96,8 +96,6 @@
 @import url(components/Movies/__short-film/movies__short-film.css);
 @import url(components/Movies/__card-area/movies__card-area.css);
 
-@import url(components/MoviesCardList/MoviesCardList.css);
-
 @import url(components/NavTab/NavTab.css);
 @import url(components/NavTab/__string/navtab__string.css);
 @import url(components/NavTab/__container/navtab__container.css);
