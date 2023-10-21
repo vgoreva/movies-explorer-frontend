@@ -5,6 +5,7 @@ import CurrentUserContext from '../../contexts/CurrentUserContext';
 function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIsSuccess }) {
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
+    const [isEdit, setIsEdit] = useState(false)
 
     const currentUser = useContext(CurrentUserContext);
 
@@ -44,6 +45,13 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
         setEmail(currentUser.email);
     }, []);
 
+    useEffect(() => {
+        if (currentUser.name === userName && currentUser.email === email) {
+            setIsEdit(false)
+        } else {
+            setIsEdit(true)
+        }
+    });
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -62,6 +70,7 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
             isError={isError}
             setIsSucces={setIsSuccess}
             isSuccess={isSuccess}
+            isEdit={isEdit}
         >
             {inputs.map(({ type, name, id, placeholder, required, value, onChange, errorMesage, key }) => {
                 return <div className="profile__line" key={key}>
