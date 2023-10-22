@@ -40,7 +40,7 @@ function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete,
             window.addEventListener('resize', resize)
             return () => window.removeEventListener('resize', resize)
         }
-    }, [pathname, searchedMoviesOrder])
+    }, [pathname, movies])
 
     function onMore() {
         setCount(count + arrangeCards().step)
@@ -51,14 +51,13 @@ function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete,
             <ul className="movies__card-area">
                 {isLoading ? <Preloader /> :
                     (pathname === '/movies' && searchedMoviesOrder.length !== 0) ?
-                        searchedMoviesOrder.map(data => {
+                    searchedMoviesOrder.map(data => {
                             return (
                                 <li className="card" key={data.id}>
                                     <Card
                                         card={data}
                                         savedMovies={savedMovies}
                                         addMovie={addMovie}
-                                        
                                     />
                                 </li>
                             )

@@ -13,7 +13,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import mainApi from "../../utils/MainApi.js";
 
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Preloader from '../Preloader/Preloader';
 
@@ -185,6 +185,7 @@ function App() {
               } />
 
               <Route path='/signup' element={
+                loggedIn ? <Navigate to='/movies' replace /> :
                 <Register
                   onRegister={handleRegister}
                   isSend={isSend}
@@ -194,6 +195,7 @@ function App() {
               } />
 
               <Route path='/signin' element={
+                loggedIn ? <Navigate to='/movies' replace /> :
                 <Login
                   onLogin={handleLogin}
                   isSend={isSend}

@@ -51,17 +51,16 @@ function Movies({ setIsError, savedMovies, addMovie, isError }) {
     }
 
     useEffect(() => {
-        if (localStorage.movie && localStorage.shorts && localStorage.allMovies) {
+        if (localStorage.movie && localStorage.shorts && localStorage.allmovies) {
+            const allMovies = JSON.parse(localStorage.allmovies)
             const search = JSON.parse(localStorage.movie)
             const shorts = JSON.parse(localStorage.shorts)
-            const allMovies = JSON.parse(localStorage.allmovies)
             setIsServerError(false)
             setSearchRequest(search)
             setMark(shorts)
             setAllMovies(allMovies)
-            filter(search, shorts, allMovies)
         }
-    }, [filter, navigate])
+    }, [filter,navigate])
 
     function chooseShorts() {
         if (isMark) {
