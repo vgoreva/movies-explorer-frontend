@@ -74,7 +74,7 @@ function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete,
                                     </li>
                                 )
                             })
-                            :serverError ?
+                            : serverError ?
                                 <span className="movies__notation">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен.
                                     Подождите немного и попробуйте ещё раз</span>
                             : !entrance ?
