@@ -3,10 +3,6 @@
     align-self: center;
 }
 
-.header__navtab-item:nth-child(2) {
-    display: none;
-}
-
 @media screen and (max-width:768px) {
     .header__navtab-item:nth-child(2) {
         display: block;
