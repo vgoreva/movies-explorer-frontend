@@ -59,6 +59,7 @@ function Movies({ setIsError, savedMovies, addMovie, isError }) {
             setSearchRequest(search)
             setMark(shorts)
             setAllMovies(allMovies)
+            filter(search, shorts, allMovies)
         }
     }, [filter,navigate])
 
