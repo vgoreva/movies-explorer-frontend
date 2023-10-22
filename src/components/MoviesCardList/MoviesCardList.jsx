@@ -78,8 +78,8 @@ function MoviesCardList({ movies, savedMovies, isLoading, serverError, onDelete,
                                 <span className="movies__notation">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен.
                                     Подождите немного и попробуйте ещё раз</span>
                             : !entrance ?
-                            <span className="movies__notation">Ничего не найдено</span> :
-                                    ""
+                            "Ничего не найдено" :
+                            ""
                 }
                 
                 {count >= movies.length || pathname !== '/movies'?
