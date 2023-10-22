@@ -30,6 +30,8 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
             type: "text",
             name: "username",
             id: "username",
+            minLength: 2,
+            maxLength: 30,
             placeholder: "Имя",
             required: true,
             value: userName || "",
@@ -81,13 +83,15 @@ function Profile({ setIsError, isError, onLogout, onUpdateUser, isSuccess, setIs
             isSuccess={isSuccess}
             isEdit={isEdit}
         >
-            {inputs.map(({ type, name, id, placeholder, required, value, onChange, key }) => {
+            {inputs.map(({ type, name, id, minLength, maxLength, placeholder, required, value, onChange, key }) => {
                 return <div className="profile__line" key={key}>
                     <div className="profile__cell-name">{placeholder}</div>
                     <input
                         className="profile__cell-content"
                         type={type}
                         id={id}
+                        minLength={minLength}
+                        maxLength={maxLength}
                         name={name}
                         placeholder={placeholder}
                         required={required}
