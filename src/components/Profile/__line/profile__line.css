@@ -3,10 +3,26 @@
     flex-direction: row;
     justify-content: space-between;
     height: 30px;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .profile__line:first-child {
     border-bottom: 1px solid #E8E8E8;
     align-items: start;
+}
+
+.profile__line:last-of-type {
+    margin-bottom: 220px;
+}
+
+@media screen and (max-width:768px) {
+    .profile__line:last-of-type {
+        margin-bottom: 210px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .profile__line:last-of-type {
+        margin-bottom: 379px;
+    }
 }

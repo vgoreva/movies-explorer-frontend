@@ -5,7 +5,7 @@ import menu from '../../images/menu.svg'
 import close from '../../images/close.svg'
 import { useState } from 'react';
 
-function Header({ name }) {
+function Header({ name, loggedIn }) {
 
     const navigate = useNavigate()
 
@@ -13,56 +13,56 @@ function Header({ name }) {
 
     return (
         <header className={name === "main" ? "header" : "header header_theme_white"}>
-                    <img
-                    className={!menuActive ? "header__logo" : "header__logo_locked"}
-                    src={logo}
-                    alt="Логотип"
-                    onClick={() => navigate('/')}
-                />
+            <img
+                className={!menuActive ? "header__logo" : "header__logo_locked"}
+                src={logo}
+                alt="Логотип"
+                onClick={() => navigate('/')}
+            />
 
-                {name === "main" ?
-                    <nav className='header__menu header__menu_theme_horizontal'>
-                        <Link to={"/signup"} className="header__link">Регистрация</Link>
-                        <button className="header__button" type="button" onClick={() => navigate('/signin')} >Войти</button>
-                    </nav> :
-                    <>
-                    <nav className={!menuActive ? "header__menu" : "header__menu header__menu_active header__menu_opened" } >
-                        <ul className={!menuActive ? 'header__navtab' : "header__navtab header__navtab_active"}>
-                            <img
-                                className={menuActive ? "header__menu-close header__menu-close_active" : "header__menu-close"}
-                                src={close}
-                                alt="Закрыть"
-                                onClick={() => setMenuActive(!menuActive)}
-                            />
-                            <li className='header__navtab-item'>
-                                <Link to={"/"} className={ menuActive ? "header__link header__link_theme_vertical" : "header__link"}>Главная</Link></li>
-                            <li className='header__navtab-item'>
-                                <Link to={"/movies"} className={ menuActive ? "header__link header__link_theme_vertical" : "header__link"}>Фильмы</Link></li>
-                            <li className='header__navtab-item'>
-                                <Link to={"/saved-movies"} className={ menuActive ? "header__link header__link_theme_vertical" : "header__link"}>Сохранённые фильмы</Link></li>
-                            <li className='header__navtab-item'>
-                                <div className='header__account'>
-                                    <Link to={"/profile"} className={ menuActive ? "header__link header__link_theme_vertical header__link_type_account" : "header__link"}>Аккаунт</Link>
-                                    <div className='header__avatar'>
-                                        <img
-                                            className='header__icon'
-                                            src={avatar}
-                                            alt="Аватар" />
-                                    </div>
+            {name === "main" && !loggedIn ?
+                <nav className={!menuActive ? "header__menu" : "header__menu header__menu_active header__menu_opened"} >
+                    <ul className={!menuActive ? 'header__navtab' : "header__navtab header__navtab_active"}>
+                        <li className='header__navtab-item'><Link to={"/signup"} className="header__link">Регистрация</Link></li>
+                        <li className='header__navtab-item'><button className="header__button" type="button" onClick={() => navigate('/signin')} >Войти</button></li>
+                    </ul>
+                </nav>
+                :
+                <nav className={!menuActive ? "header__menu" : "header__menu header__menu_active header__menu_opened"} >
+                    <ul className={!menuActive ? 'header__navtab' : "header__navtab header__navtab_active"}>
+                        <img
+                            className={menuActive ? "header__menu-close header__menu-close_active" : "header__menu-close"}
+                            src={close}
+                            alt="Закрыть"
+                            onClick={() => setMenuActive(!menuActive)}
+                        />
+                        <li className='header__navtab-item'>
+                            <Link to={"/"} className={menuActive ? "header__link header__link_theme_vertical" : "header__link"}>Главная</Link></li>
+                        <li className='header__navtab-item'>
+                            <Link to={"/movies"} className={menuActive ? "header__link header__link_theme_vertical" : "header__link"}>Фильмы</Link></li>
+                        <li className='header__navtab-item'>
+                            <Link to={"/saved-movies"} className={menuActive ? "header__link header__link_theme_vertical" : "header__link"}>Сохранённые фильмы</Link></li>
+                        <li className='header__navtab-item'>
+                            <div className='header__account'>
+                                <Link to={"/profile"} className={menuActive ? "header__link header__link_theme_vertical header__link_type_account" : "header__link"}>Аккаунт</Link>
+                                <div className='header__avatar'>
+                                    <img
+                                        className='header__icon'
+                                        src={avatar}
+                                        alt="Аватар" />
                                 </div>
-                            </li>
-                        </ul>
-                    </nav>
-                    {!menuActive ? <img
-                    className="header__menu-icon"
-                    src={menu}
-                    alt="Меню"
-                    onClick={() => setMenuActive(!menuActive)}
-                /> :
-                    ""}
-            </>
-            }
-        </header >
+                            </div>
+                        </li>
+                    </ul>
+                </nav>}
+            {!menuActive ? <img
+                className="header__menu-icon"
+                src={menu}
+                alt="Меню"
+                onClick={() => setMenuActive(!menuActive)}
+            /> :
+                ""}
+        </header>
     )
 }
 

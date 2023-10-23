@@ -1,9 +1,10 @@
-.profile__edit {
+.profile__message {
     margin: 0 auto;
+    margin-bottom: 30px;
     padding: 0;
     display: block;
     width: fit-content;
-    color: #000;
+    color: #FF4062;
     background-color: transparent;
     border: none;
     text-decoration: none;
@@ -11,10 +12,4 @@
     font-size: 0.8125rem;
     font-weight: 400;
     line-height: 1.2;
-}
-
-@media screen and (max-width:320px) {
-    .profile__edit {
-        font-size: 0.75rem;
-    }
 }
